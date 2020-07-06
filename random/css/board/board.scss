@@ -1,0 +1,110 @@
+@charset "utf-8";
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+.board {
+  font-size: 0.5rem;
+  width: 100%;
+  min-height: 100%;
+
+  .container {
+    min-height: 100vh;
+    border-left: 2px dotted black;
+    border-right: 2px dotted black;
+    @include sp {
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+
+.board-container {
+  height: auto;
+  padding-top: 3rem;
+
+  padding-bottom: 2rem;
+
+  .comment-contents {
+    height: 100%;
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    .form {
+      #comment-name {
+        margin-bottom: 1rem;
+      }
+      #comment-name-area {
+        width: 40%;
+      }
+
+      #comment-textarea {
+        width: 70%;
+        margin-bottom: 0.5rem;
+      }
+
+      #comment-btn {
+        margin-bottom: 1rem;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgb(178, 214, 250);
+      }
+    }
+
+    .filtering {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 0.5rem;
+
+      button {
+        display: inline-block;
+        background-color: rgb(178, 214, 250);
+        border-radius: 5px;
+        border: 1px solid black;
+        width: 15%;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .comment-display {
+      width: 100%;
+      max-width: 100%;
+      .comment-name {
+        margin-bottom: 0.5rem;
+      }
+      .comment-prefecture {
+        margin-bottom: 0.1rem;
+      }
+      .comment-place {
+        margin-bottom: 0.5rem;
+      }
+      .comment-comment {
+        margin-bottom: 0.5rem;
+      }
+      .comment-created {
+        font-size: 0.3rem;
+        text-align: right;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.board {
+  font-size: 0.5rem;
+  width: 100%;
+  min-height: 100%;
+}
+
+.board .container {
+  min-height: 100vh;
+  border-left: 2px dotted black;
+  border-right: 2px dotted black;
+}
+
+@media (max-width: 480px) {
+  .board .container {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.board-container {
+  height: auto;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.board-container .comment-contents {
+  height: 100%;
+}
+
+.board-container .comment-contents h3 {
+  margin-bottom: 1rem;
+}
+
+.board-container .comment-contents .form #comment-name {
+  margin-bottom: 1rem;
+}
+
+.board-container .comment-contents .form #comment-name-area {
+  width: 40%;
+}
+
+.board-container .comment-contents .form #comment-textarea {
+  width: 70%;
+  margin-bottom: 0.5rem;
+}
+
+.board-container .comment-contents .form #comment-btn {
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #b2d6fa;
+}
+
+.board-container .comment-contents .filtering {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+.board-container .comment-contents .filtering button {
+  display: inline-block;
+  background-color: #b2d6fa;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 15%;
+}
+
+.board-container .comment-contents .filtering button:hover {
+  opacity: 0.8;
+}
+
+.board-container .comment-contents .comment-display {
+  width: 100%;
+  max-width: 100%;
+}
+
+.board-container .comment-contents .comment-display .comment-name {
+  margin-bottom: 0.5rem;
+}
+
+.board-container .comment-contents .comment-display .comment-prefecture {
+  margin-bottom: 0.1rem;
+}
+
+.board-container .comment-contents .comment-display .comment-place {
+  margin-bottom: 0.5rem;
+}
+
+.board-container .comment-contents .comment-display .comment-comment {
+  margin-bottom: 0.5rem;
+}
+
+.board-container .comment-contents .comment-display .comment-created {
+  font-size: 0.3rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}

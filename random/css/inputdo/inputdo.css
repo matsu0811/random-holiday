@@ -1,0 +1,18 @@
+.input {
+  font-size: 0.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: #f3ecdb;
+}
+
+.input-container {
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+
+.input-container a {
+  color: black;
+  display: inline-block;
+  margin-top: 2rem;
+}
